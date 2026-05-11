@@ -22,7 +22,7 @@ import {
   ClipboardList,
   BarChart3,
 } from "lucide-react";
-import Organizer_dashboard from "../components/organizer_dashboard";
+import Organizer_dashboard from "../components/Organizer_dashboard";
 import User_Bookings from "../components/User_Bookings";
 import User_Setting from "../components/User_Setting";
 import Organizer_Setting from "../components/Organizer_Setting";
