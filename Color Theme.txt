@@ -1,0 +1,96 @@
+Project Name: Planora – Event Management System
+Website Purpose: A modern platform for seamless event planning, premium templates, collaborative scheduling, and smart event management.
+
+🌈 Color Theme
+
+Planora follows a dark luxury theme with vibrant accents to reflect the energy and elegance of live events.
+
+Core Colors
+
+Primary Background (Dark): #111827 → used for main sections, navbars, and forms.
+
+Secondary Background: #1f2937 → for cards, modals, and content blocks.
+
+Primary Accent (Purple): #c084fc → for buttons, highlights, and key CTAs.
+
+Secondary Accent (Pink): #f472b6 → for links, hover states, and secondary buttons.
+
+Highlight Yellow: #facc15 → sparingly used for emphasis (alerts, important icons).
+
+Text Colors
+
+Primary Text: #ffffff (white, for headers and body on dark backgrounds).
+
+Secondary Text: #d1d5db (light gray, for subtext and form labels).
+
+Muted Text: #9ca3af (placeholders, disabled states).
+
+Link Text / CTA: #ec4899 (pink) or #60a5fa (blue).
+
+Status Colors
+
+Success: #22c55e
+
+Error: #ef4444
+
+Warning: #facc15
+
+Info: #2563eb
+
+🖌️ Design Guidelines
+
+Overall Look & Feel:
+
+Sleek, modern, and premium.
+
+Dark backgrounds with high-contrast typography.
+
+Vibrant accent colors to capture the excitement of events.
+
+Navigation Bar:
+
+Background → #111827.
+
+Text → White (#ffffff).
+
+Active Link Highlight → #c084fc.
+
+Hero Sections:
+
+Use event photography backgrounds with a dark gradient overlay (rgba(0,0,0,0.7)).
+
+Headings in white, CTA buttons in purple accent (#c084fc).
+
+Forms & Cards:
+
+Background → #1f2937.
+
+Rounded corners, soft shadows.
+
+Inputs → Dark background, light borders, placeholder in muted gray.
+
+Buttons:
+
+Primary: Purple background #c084fc, white text. Hover → darker purple #9333ea.
+
+Secondary: Transparent / outlined with purple borders.
+
+Danger: Red (#ef4444) for delete/cancel actions.
+
+Typography:
+
+Headings → Bold, white (#ffffff).
+
+Body text → Light gray (#d1d5db).
+
+Links → Pink (#f472b6) or blue (#60a5fa).
+
+Imagery:
+
+Use event photos with purple/pink neon lighting tones.
+
+Always apply a dark overlay for text readability.
+
+🚀 Tone & Branding
+
+Planora is about elegance, energy, and seamless event planning. The UI must feel professional yet exciting, reflecting live concerts, weddings, and large-scale events

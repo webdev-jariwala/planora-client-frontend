@@ -1,0 +1,650 @@
+@font-face {
+    font-family: 'DM Sans Normal';
+    src: url('assets/fonts/DMSans_Normal.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DM Sans SemiBold';
+    src: url('assets/fonts/DMSans_SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DM Sans Bold';
+    src: url('assets/fonts/DMSans_Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DM Sans ExtraBold';
+    src: url('assets/fonts/DMSans_ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('assets/fonts/Recoleta-RegularDEMO.otf') format('truetype');
+}
+
+/* :root{
+  --main-bg:#2d2d2d;
+  --sec-bg:#1a1a1a;
+  --deep-bg:#0d0d0d;
+  --border-col:#404040;
+} */
+
+/* --main-bg:if(100vw>991.98px,#ffffff,#2d2d2d);
+  --sec-bg:if(100vw>991.98px,#f9f9f9,#1a1a1a);
+  --deep-bg:if(100vw>991.98px,#f2f2f2,#0d0d0d);
+  --border-col:if(100vw>991.98px,#f5f5f5,#404040); */
+
+:root{
+  --main-bg:#ffffff;
+  --sec-bg:#f9f9f9;
+  --deep-bg:#f2f2f2;
+  --border-col:#f5f5f5;
+}
+/* Modern Navbar Styles */
+.modern-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Logo Animation */
+.logo-container:hover .logo-image {
+  transform: scale(1.05);
+  filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Navigation Links */
+.modern-nav-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 20px !important;
+  color: var(--main-bg);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+       /*
+        Interpreting Your Curve (0.3,0.7,0.4,1.0)
+        x values (0.3, 0.4) → tell at what “time fraction” the bend happens.
+        y values (0.7, 1.0) → tell how much “progress fraction” is reached at those bends.
+            Meaning:
+            At ~30% of the time, the animation has already reached 70% progress → fast start.
+            At ~40% of the time, it’s almost at 100% progress → slowing down at the end. 
+       */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.link-text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+  color: var(--sec-bg);
+}
+
+.link-underline {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--sec-bg) 0%, var(--border-col) 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.nav-links-container {
+    transition-duration: 0.5s !important;
+}
+@media (max-width: 1375px) {
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: 30px !important;
+  }
+  .search-container{
+    margin-top: 8px !important;
+  }
+  .nav-link {
+    font-size: 19px !important;
+  }
+  .profile_pic_div{
+    margin-top: 8px !important;
+  }
+}
+@media (max-width: 1300px) {
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: -20px !important;
+  }
+  .search-container{
+    margin-top: 8px !important;
+  }
+  .nav-link {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 1250px) {
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: -30px !important;
+  }
+  .search-container{
+    margin-top: 8px !important;
+  }
+  .nav-link {
+    font-size: 17px !important;
+  }
+}
+@media (max-width: 1200px) {
+
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: -30px !important;
+    margin-right: -10% !important;
+  }
+  .nav-link {
+    font-size: 17px !important;
+  }
+  .search-container{
+    width: 100% !important;
+    margin-top: 8px !important;
+    margin-left: 20% !important;
+  }
+  .search-input {
+    min-width: 50% !important;
+  }
+  .search-btn {
+    min-width: 50% !important;
+    padding-top: 5px !important;
+  }
+  
+}
+@media (max-width: 1110px) {
+
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: -30px !important;
+    margin-right: -15% !important;
+    gap: 20px !important;
+  }
+  .nav-link {
+    font-size: 17px !important;
+  }
+  .search-container{
+    width: 100% !important;
+    margin-top: 8px !important;
+    margin-left: 30% !important;
+    margin-right: -20px !important;
+  }
+  .search-input {
+    min-width: 50% !important;
+  }
+  .search-btn {
+    min-width: 50% !important;
+    padding-top: 5px !important;
+  }
+  .profile_pic_div{
+    margin-top: 8px !important;
+    margin-left: 17px !important;
+  }
+}
+@media (max-width: 1015px) {
+
+  .nav-links-container {
+    margin-top: 8px !important;
+    margin-left: -35px !important;
+    margin-right: -15% !important;
+    gap: 12px !important;
+  }
+  .nav-link {
+    font-size: 17px !important;
+  }
+  .search-container{
+    width: 100% !important;
+    margin-top: 8px !important;
+    margin-left: 30% !important;
+    margin-right: -20px !important;
+  }
+  .search-input {
+    min-width: 50% !important;
+  }
+  .search-btn {
+    min-width: 50% !important;
+    padding-top: 5px !important;
+  }
+  .profile_pic_div{
+    margin-top: 8px !important;
+    margin-left: 17px;
+  }
+}
+/* Hover Effects */
+.modern-nav-link:hover {
+  color: var(--sec-bg) !important;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+.modern-nav-link:hover .link-underline {
+  width: 75%;
+}
+
+.modern-nav-link:hover .link-text {
+  color: var(--sec-bg);
+}
+
+/* Active Link Styles */
+.active-link {
+  color: var(--sec-bg) !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05));
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.active-link .link-underline {
+  width: 90%;
+  background: linear-gradient(90deg, var(--sec-bg) 0%, var(--main-bg) 100%);
+}
+
+.active-link .link-text {
+  color: var(--sec-bg);
+}
+
+/* Inactive Link */
+.inactive-link {
+  color: #6b6b6b;
+}
+
+.inactive-link:hover {
+  color: var(--sec-bg) !important;
+}
+
+/* Search Form Styles */
+.search-form {
+  margin-left: auto;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.search-container:focus-within {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  padding: 16px 20px;
+  font-size: 14px;
+  outline: none;
+  width: 240px;
+  color: var(--main-bg);
+  border-radius: 0;
+  font-weight: 500;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: none !important;
+}
+
+.search-input:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  padding: 16px 20px;
+  font-size: 14px;
+  outline: none;
+  width: 240px;
+  color: var(--main-bg);
+  border-radius: 0;
+  font-weight: 500;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+.search-btn {
+  background: var(--main-bg);
+  border: none;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-width: 120px;
+  height: 100%;
+}
+
+.search-btn:hover {
+  background: var(--sec-bg);
+  color: white;
+}
+
+.search-btn:active {
+  background: var(--deep-bg);
+}
+
+/* Mobile Responsive */
+.modern-toggler {
+  border: none !important;
+  outline: none !important;
+  border-radius: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.35) !important;
+  filter: brightness(0) invert(1);
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modern-toggler:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.modern-toggler:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(45, 45, 45, 0.15) !important;
+  border: none !important;
+}
+
+.modern-toggler:active {
+  transform: translateY(0);
+  background: rgba(45, 45, 45, 0.12);
+}
+
+/* Keep Bootstrap's default hamburger icon but style it */
+.modern-toggler .navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.modern-toggler[aria-expanded="true"] {
+  background: rgba(45, 45, 45, 0.1);
+}
+
+/* Desktop and Mobile Layout Control */
+.desktop-layout {
+  display: flex;
+}
+
+.mobile-layout {
+  display: none;
+}
+
+/* Mobile Navigation Links */
+@media (max-width: 991.98px) {
+  .modern-navbar {
+    padding: 0 20px !important;
+  }
+  
+  .desktop-layout {
+    display: none !important;
+  }
+  
+  .mobile-layout {
+    display: block !important;
+  }
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+  }
+  
+  .nav-links-container {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    gap: 8px !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .modern-nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px !important;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .modern-nav-link:hover {
+    background: rgba(0, 0, 0, 0.08) !important;
+    transform: translateX(5px);
+  }
+  
+  .active-link {
+    background: rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  
+.link-underline {
+    bottom: 12px;
+    left: 20px;
+    transform: none;
+    width: 30px !important;
+    background: none;
+    background-color: black !important;
+  }
+  
+  .active-link .link-underline {
+    width: 40px !important;
+    background: none;
+    background-color: black !important;
+  }
+  
+  .mobile-search {
+    margin-top: 20px;
+    width: 130%;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-left: -36% !important;
+  }
+  
+  .mobile-search .search-container {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .mobile-search .search-input {
+    width: 100%;
+    flex: 1;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .mobile-search .search-btn {
+    min-width: 80px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .profile_pic_div{
+    position: relative;
+  }
+  .profile_pic_div{
+    position: absolute;
+    top: 13px;
+    right: 100px;
+  }
+}
+
+/* Extra specificity for Bootstrap override */
+@media (max-width: 991px) {
+  .navbar-collapse .desktop-layout {
+    display: none !important;
+  }
+  
+  .navbar-collapse .mobile-layout {
+    display: block !important;
+  }
+}
+
+/* Even more specific for troubleshooting */
+.navbar-collapse .desktop-layout {
+  display: flex;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse .desktop-layout {
+    display: none !important;
+  }
+}
+
+/* Scroll Effect */
+.modern-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 2px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav {
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.search-form {
+  animation: fadeInUp 0.7s ease-out 0.1s both;
+}
+
+.profile_pic_div{
+  animation: fadeInUp 0.7s ease-out 0.1s both !important;
+}
+/* Additional Professional Touches */
+.navbar-brand {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+/* Focus states for accessibility */
+.modern-nav-link:focus {
+  outline-offset: 2px;
+}
+
+.search-input:focus {
+  box-shadow: none;
+}
+
+/* Enhanced typography */
+.modern-nav-link {
+  text-transform: none;
+  font-size: 15px;
+}
+
+/* Home Css */
+/* Home Slider Css */
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Home card Css */
+.home-card-container{
+  position:absolute !important;
+  width:80% !important;
+  top: 0px ;
+  right: 0px;
+}
+
+
+@media  (min-width :1024px) {
+  .home-card-container .card-1{
+    margin-top: 100%;
+  }
+  .home-card-container .card-2{
+    margin-top: 50%;
+  }
+}
+@media  (max-width :768px) {
+  .home-card-container{
+    padding-left: 10%;
+  }
+}
+@media  (max-width :468px) {
+  .home-card-container{
+    padding-left: 20% !important;
+  }
+}
+@media  (min-width :1024px) {
+  .home_content_container{
+    height:220vh;
+  }
+}
+
+@media  (min-width :824px) {
+  .home_content_container{
+    height:195vh;
+  }
+}
+@media  (min-width :768px) {
+  .home_content_container{
+    height:188vh;
+  }
+}
+
+
