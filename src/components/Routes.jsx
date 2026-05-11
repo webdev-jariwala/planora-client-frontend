@@ -27,7 +27,7 @@ import MaintenancePage from "../Pages/MaintenancePage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
-import ChatBot from "./chatBot";
+import ChatBot from "./ChatBot";
 
 function AppWrapper({ profilePic, setProfilePic, filters, setFilters }) {
   const location = useLocation();
